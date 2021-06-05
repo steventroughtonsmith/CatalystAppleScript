@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary>
+	<suite name="MyApp suite" code="MYAP" description="Standard terms for MyApp scripting">
+		<command name="command 2" code="MYAPcmd2" description="Performs command 2 with arguments">
+			<cocoa class="CatalystAppleScript.MyDoThingWithArgumentCommand"/>
+			<direct-parameter type="list of text" optional="no" description="the arguments"/>
+		</command>
+		<command name="command 1" code="MYAPcmd1" description="Performs command 1">
+			<cocoa class="CatalystAppleScript.MyDoThingCommand"/>
+		</command>
+		<class name="application" code="capp">
+			<cocoa class="NSApplication"/>
+			<access-group identifier="*" access="rw"/>
+			<property name="saved number" code="snum" type="integer" access="rw" description="the currently exposed number">
+				<cocoa key="savedNumber"/>
+				</property>
+			<property name="saved bool" code="sbol" type="boolean" access="r" description="the currently exposed bool">
+				<cocoa key="savedBool"/>
+				</property>
+			<property name="saved list" code="slst" type="list of text" access="r" description="the currently exposed list">
+				<cocoa key="savedList"/>
+				</property>
+			<property name="saved string" code="sstr" type="text" access="rw" description="the currently exposed string">
+				<cocoa key="savedString"/>
+			</property>
+		<property name="version" code="vers" type="text" access="r" description="the version of the application">
+			<access-group identifier="*"/>
+		</property>
+		</class>
+	</suite>
+</dictionary>
+
