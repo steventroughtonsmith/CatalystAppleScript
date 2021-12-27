@@ -13,8 +13,10 @@
 
 @import Foundation;
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= 140000
 @interface NSScriptCommand : NSObject
-
+-(void)performDefaultImplementation;
 @end
+#endif
 
 #endif /* NSScriptCommand_h */

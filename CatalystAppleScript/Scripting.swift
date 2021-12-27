@@ -39,7 +39,7 @@ class Scripting: NSObject {
 
 @objc class MyDoThingCommand: NSScriptCommand {
 	
-	@objc public func performDefaultImplementation() -> Any? {
+	@objc public override func performDefaultImplementation() -> Any? {
 		NSLog("MyDoThingCommand")
 		
 		DataModel.shared.testState1.toggle()
@@ -49,7 +49,7 @@ class Scripting: NSObject {
 }
 
 @objc class MyDoThingWithArgumentCommand: NSScriptCommand {
-	@objc public func performDefaultImplementation() -> Any? {
+	@objc public override func performDefaultImplementation() -> Any? {
 		
 		let arguments = evaluatedArguments()
 		
